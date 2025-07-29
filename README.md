@@ -13,8 +13,18 @@ It runs in localhost:5000 which is customizable.
 
 ## Getting Started
 
-### Local Run
+### Running Locally
+Run it directly from pixelplace.py. You'll need to install the required dependencies:
+```
+pip install Flask flask-socketio eventlet
+```
+and then
+```
+python pixelplace.py
+```
 
+### Docker Run
+Run it from docker
 ```bash
 docker-compose up --build
 
