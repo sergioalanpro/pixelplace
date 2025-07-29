@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Pixelplace</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes" />
+  <style>
+    body {
+      margin: 0;
+      background: #000000;
+      color: white;
+      font-family: sans-serif;
+      text-align: center;
+    }
+    
+    canvas {
+      image-rendering: pixelated;
+      touch-action: pinch-zoom;
+    }
+    
+    #container {
+      max-width: 90vmin;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>Pixelplace</h1>
+  <p>Toca o haz clic para pintar</p>
+
+  <label for="colorPicker">Color del lapiz:</label>
+  <input type="color" id="colorPicker" value="#000000">
+  <button id="clearBtn">Borrar dibujo</button>
+
+  <label for="bgcolorPicker">Fondo:</label>
+ <input type="color" id="bgcolorPicker" value="#FFFFFF">
+ <button id="setBgColorBtn">Cambiar fondo</button>
+
+  <div id="container">
+    <canvas id="canvas" width="64" height="64"></canvas>
+  </div>
+
+  <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
