@@ -26,7 +26,7 @@ python pixelplace.py
 ### Docker Run
 Run it from docker
 ```bash
-docker-compose up --build
+docker compose up --build
 
 ```
 
